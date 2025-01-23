@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Action for Tasks -->
+    <record id="action_task" model="ir.actions.act_window">
+        <field name="name">Tasks</field>
+        <field name="res_model">project.task</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menu Item for Tasks -->
+    <menuitem id="menu_task" name="Tasks" parent="menu_demokt_root" action="action_task" />
+
+    <!-- Tree View for Tasks -->
+    <record id="view_task_tree" model="ir.ui.view">
+        <field name="name">task</field>
+        <field name="model">project.task</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="name"/>
+                <field name="description"/>
+                <field name="assigned_to"/>
+                <field name="demo_id"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Form View for Tasks -->
+    <record id="view_task_form" model="ir.ui.view">
+        <field name="name">task</field>
+        <field name="model">project.task</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="name"/>
+                        <field name="description"/>
+                        <field name="assigned_to"/>
+                        <field name="demo_id"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+     <!-- Inherit the Sale Order Line form View -->
+    <record id="sales_order_view" model="ir.ui.view">
+        <field name="name">sale.order.custom</field>
+        <field name="model">sale.order</field>
+        <field name="inherit_id" ref="sale.view_order_form"/>  
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='order_lines']//tree/field[@name='name']" position="after">
+                <field name="new_brands" placeholder="Enter Brand Name"/>
+            </xpath>
+        </field>
+    </record>
+    
+     <!-- Inherit the Sale invoice Order Line form View -->
+    <record id="sales_invoice_view" model="ir.ui.view">
+        <field name="name">invoice.custom</field>
+        <field name="model">account.move</field>
+        <field name="inherit_id" ref="account.view_move_form"/>  
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='invoice_tab']//field[@name='name']" position="after">
+                <field name="new_brand"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="stock_view" model="ir.ui.view">
+        <field name="name">stock.picking.form.custom</field>
+        <field name="model">stock.picking</field>
+        <field name="inherit_id" ref="stock.view_picking_form"/>  
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='operations']//field[@name='quantity']" position="after">
+                <field name="new_brand"/>
+            </xpath>
+        </field>
+    </record>
+
+    <record id="crm_view" model="ir.ui.view">
+        <field name="name">crm.form.custom</field>
+        <field name="model">crm.lead</field>
+        <field name="inherit_id" ref="crm.crm_lead_view_form"/>  
+        <field name="arch" type="xml">
+            <xpath expr="//page[@name='lead']//group[@name='Misc']//field[@name='company_id']" position="after">
+                <field name="new_brand"/>
+            </xpath>
+        </field>
+    </record>
+
+
+
+</odoo>

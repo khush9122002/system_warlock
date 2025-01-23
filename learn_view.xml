@@ -1,0 +1,158 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <!-- Action for Demo KT -->
+    <record id="action_demokt" model="ir.actions.act_window">
+        <field name="name">Demo KHUSH THAKKAR</field>
+        <field name="res_model">examkt</field>
+        <field name="view_mode">kanban,tree,form</field>
+    </record>
+
+    <!-- Menu Items -->
+    <menuitem id="menu_demokt_root" name="Demo KT"/>
+    <menuitem id="menu_demokt" name="Demo" parent="menu_demokt_root"/>
+    <menuitem id="demo" name="sub menu" parent="menu_demokt" action="action_demokt"  />
+
+    <!-- Tree View for Demo KT -->
+    <record id="view_demokt_tree" model="ir.ui.view">
+        <field name="name">demokt</field>
+        <field name="model">examkt</field>
+        <field name="arch" type="xml">
+            <tree editable="bottom" multi_edit="False" default_order="clname desc">
+                <header>
+                    <button name="check_pop" type="object" string="show pop_pop" class="btn-info"/>
+                </header>
+                <field name="clname" decoration-danger="clname == 'ronak_conkt...'" />
+                <field name="dob"  />
+                <field name="gen"/>
+                <field name="age" widget="progressbar"/>
+                <field name="salary"/>
+                <field name="is_active"/>
+                <field name="desc"/>
+                <field name="company_id"/>
+                <field name="partner_ids"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- form View for Demo KT -->
+    <record id="view_demokt_form" model="ir.ui.view">
+        <field name="name">demokt</field>
+        <field name="model">examkt</field>
+        <field name="arch" type="xml">
+            <form>
+                
+                <sheet>
+                    <div class="oe_button_box" name="button_box">
+                        <button name="add_cust" icon="fa-solid fa-user" type="object" string="Add customer"/>
+                        <button name="action_show_partners" class="oe_stat_button" icon="fa-solid  fa-users" type="object">
+                            <field string="Show Customer" name="count_partner" widget="statinfo"/>
+                        </button>
+                    </div>
+                    <group>
+                        <group>
+                            <field name="clname" required="True"  />
+                            <field name="dob"/> 
+                            <field name="gen" help="select bith-date on calender" />
+                            <field name="age" />
+                            <field name="parent_id"/>
+                            <field name="sub_child" context="{'show_only_children': True}"/>
+                            <field name="filtered_customers" widget="many2many_tags" />
+                        </group>
+                        <group>
+                            <field name="salary" index="True" />
+                            <field name="is_active" readonly="True" />
+                            <field name="desc" size="3"/>
+                            <field name="company_id"/>
+                            <field name="partner_ids" widget="many2many_tags" />
+                        </group>
+                    </group>
+                    <notebook>
+                        <page string="Tasks">
+                            <field name="task_ids">
+                                <tree editable="bottom">
+                                    <field name="display_name"/>
+                                </tree>
+                            </field>
+
+                        </page>
+                         <!-- <page string="Child Names">
+                            <field name="sub_child"/>
+                        </page> -->                       
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+                <!-- search &  filter & group View for Demo KT -->
+    <record id="view_demokt_serach" model="ir.ui.view">
+        <field name="name">demokt</field>
+        <field name="model">examkt</field>
+        <field name="arch" type="xml">
+            <search>
+                <field name="clname" string="Name"/>
+                <field name="gen" string="gen "/>
+                <field name="desc" string="description.."/>
+                <field name="salary" string="sal"/>
+                <field name="partner_ids"/>
+                <filter string="Description not empty" name="desc" domain="[('desc','!=',False)]"/>
+                <filter string="gender_male" name="gen" domain="[('gen','=','m')]"/>
+                <group expand="0" string="Group By">                 
+                    <filter name='clname' string="customer_name" context="{'group_by':'clname'}"/>
+                    <filter name='gen' string="gender" context="{'group_by':'gen'}"/>
+
+                    <filter name='partner_ids' string="partner_ids" context="{'group_by':'partner_ids'}"/>
+                </group>
+            </search>
+        </field>
+    </record>
+        <!-- kanban for Demo KT -->
+    <record id="view_demo_kanban" model="ir.ui.view">
+    <field name="name">demo.kanban</field>
+    <field name="model">examkt</field>
+    <field name="arch" type="xml">
+        <kanban color="clname" quick_create="False" drag_group="False">
+            <field name="clname"/>
+            <field name="gen" string="gen"/>
+            <field name="age" string="age"/>
+            <field name="salary" string="sal"/>
+            <field name="partner_ids"/>
+            <templates>
+                <t t-name="kanban-box">
+                    <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+                        <div class="o_kanban_record_top mb16">
+                            <div class="o_kanban_record_headings mt4">
+                                <strong class="o_kanban_record_title">
+                                    <field name="clname"/>
+                                    <field name="partner_ids"/> 
+                                </strong>
+                            </div>
+                            <div class="o_kanban_record_bottom">
+                                <div class="oe_kanban_bottom_left text-muted">
+                                    <span>
+                                        <field name="age" />
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="oe_kanban_bottom_right">
+                                <field name="salary"/>   
+                            </div>
+                        </div>
+                    </div>
+                </t>
+            </templates>
+        </kanban>      
+    </field>
+</record>
+<!-- show res.partner in inside the gen felds  -->
+<record id="contect_order_view" model="ir.ui.view">
+    <field name="name">contect.order.custom</field>
+    <field name="model">res.partner</field>
+    <field name="inherit_id" ref="base.view_partner_form"/>  
+    <field name="arch" type="xml">
+        <xpath expr="//sheet//field[@name='category_id']" position="after">
+            <field name="gen"/>
+        </xpath>
+    </field>
+</record>
+
+</odoo>
