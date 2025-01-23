@@ -1,0 +1,943 @@
+what is quatation in crm  ??
+વાસ્તવિક જીવન ઉદાહરણ:
+
+    પ્રશ્ન: કોઈ વ્યક્તિએ તમને પૂછ્યું કે "હું તમારું પ્રોડક્ટ ખરીદવા માંગું છું, તમારું ભાવ કેટલું છે?"
+    પ્રક્રિયા: તમે ક્વોટેશન બનાવો છો અને તે વ્યક્તિને જણાવો છો કે આ પ્રોડક્ટનું કિંમત ₹10,000 છે, ડિલિવરી ફી ₹500 છે, અને જો તમે 10 દિવસમાં પેમેન્ટ કરો છો તો 5% ડિસ્કાઉન્ટ મળશે.
+    દસ્તાવેજ: તમે આ બધું ક્વોટેશન દસ્તાવેજમાં લખો અને ગ્રાહકને મોકલો.
+
+1. Sales Module (વેચાણ માટેનું મódule):
+
+ઉદાહરણ:
+
+    સ્થિતિ:
+    માનો કે તમે ફર્નિચરનું બિઝનેસ ચલાવી રહ્યા છો અને એક ગ્રાહક તમને "10 ખુરશીઓ" માટે ક્વોટેશન આપવા માટે કહે છે.
+
+પ્રક્રિયા Odoo માં:
+
+    Quotation (પ્રસ્તાવ):
+        Sales Module માં ક્વોટેશન બનાવો.
+        10 ખુરશીઓની કિંમત અને ડિલિવરી ફી ઉમેરો (e.g., ₹1,000 પ્રતિ ખુરશી + ₹500 ડિલિવરી).
+        કુલ કિંમત: ₹10,500.
+        આ ક્વોટેશન ઇમેઇલ અથવા PDF મારફતે ગ્રાહકને મોકલો.
+
+    Quotation Acceptance:
+        જો ગ્રાહક આ ક્વોટેશન મંજૂર કરે છે, તો તેને Sales Order માં રૂપાંતરિત કરો.
+
+    ડિલિવરી અને પેમેન્ટ:
+        Odoo ના Inventory Module સાથે જોડાણ કરીને ખુરશીઓ ડિલિવર કરો.
+        Accounting Module દ્વારા ઇન્વોઇસ જનરેટ કરો અને પેમેન્ટ ટ્રેક કરો.
+
+ફાયદો:
+
+    સમય બચત.
+    સંપૂર્ણ ટ્રેકિંગ: ક્વોટેશનથી વેચાણ સુધીની દરેક પ્રોસેસ દસ્તાવેજિત થાય છે.
+
+2. Purchase Module (ખરીદ માટેનું મódule):
+
+ઉદાહરણ:
+
+    સ્થિતિ:
+    ફર્નિચર માટે તમને 50 મજૂર ખુરશીઓના ભાગો (e.g., લાકડું, સ્ક્રૂ) ખરીદવાની જરૂર છે.
+
+પ્રક્રિયા Odoo માં:
+
+    Purchase Order:
+        સપ્લાયર પસંદ કરો.
+        50 લાકડાના ટુકડાઓ અને સ્ક્રૂ માટે પર્ચેસ ઓર્ડર બનાવો (e.g., ₹500 પ્રતિ લાકડાનો ટુકડો).
+        કુલ કિંમત: ₹25,000.
+
+    સપ્લાયર કન્ફર્મેશન:
+        સપ્લાયર સાથે ઓર્ડર કન્ફર્મ કરો અને ડિલિવરી માટે સમય નક્કી કરો.
+
+    ડિલિવરી અને પેમેન્ટ:
+        સામાન મળતા જ તે Odoo ના Inventory Module માં એન્ટર કરો.
+        સપ્લાયરને પેમેન્ટ માટે Accounting Module ના ઇન્વોઇસની મદદ લો.
+
+ફાયદો:
+
+    ખરીદ અને સપ્લાય ચેઇન પર સંપૂર્ણ નિયંત્રણ.
+    ખર્ચ અને સપ્લાયર્સના ડેટાનું સંગ્રહ.
+
+3. CRM Module (ગ્રાહક સંબંધ મેનેજમેન્ટ):
+
+ઉદાહરણ:
+
+    સ્થિતિ:
+    એક ગ્રાહક તમને ફોન કરીને ફર્નિચર વિશે પૂછે છે અને કહેછે કે તેને ટેબલ અને ખુરશીઓનો ઓર્ડર આપવો છે.
+
+પ્રક્રિયા Odoo માં:
+
+    Lead Creation:
+        CRM Module માં નવા ગ્રાહક માટે Lead એન્ટર કરો.
+        ગ્રાહકનું નામ, ફોન નંબર, અને રકમનો અંદાજ દાખલ કરો (e.g., ₹50,000).
+
+    Opportunity Conversion:
+        જો ગ્રાહકને રુચિ છે, તો Lead ને Opportunity માં પરિવર્તિત કરો.
+        તેમની જરૂરિયાતો અને બજેટની વિગતો ઉમેરો.
+
+    Follow-Up:
+        ગ્રાહક સાથે ફોલો-અપ માટે રિમાઇન્ડર્સ સેટ કરો.
+        Odoo ની મદદથી Email અથવા ફોન કોલ દ્વારા સંપર્કમાં રહો.
+
+    Quotation Creation:
+        જ્યારે ગ્રાહક ખરીદી માટે તૈયાર હોય, ત્યારે Sales Module નો ઉપયોગ કરીને ક્વોટેશન બનાવો.
+        CRM સાથે Sales Module પણ સંકલિત છે, તેથી બધું એક જગ્યા પર વ્યવસ્થિત છે.
+
+ફાયદો:
+
+    દરેક Lead અને Opportunity પર સંપૂર્ણ નજર.
+    
+HOW TO WORK INVERTORY MODULES IN ODOO ??
+
+
+Odoo Inventory Module નું સમજૂતી (વાસ્તવિક જીવન ઉદાહરણ સાથે)
+
+Odooનું Inventory Module એક શક્તિશાળી ટૂલ છે, જે બિઝનેસમાં સામાનની જાણકારી રાખવામાં અને વ્યવસ્થિત બનાવવા માટે ઉપયોગમાં આવે છે. આ માડ્યૂલ વેરહાઉસ મેનેજમેન્ટ અને સામાનના પ્રવાહને સરળ બનાવવા માટે ઘણી સુવિધાઓ પ્રદાન કરે છે.
+વાસ્તવિક જીવન ઉદાહરણ:
+
+માનવો કે તમારા પાસે એક ઇલેક્ટ્રોનિક્સનું સ્ટોર છે જ્યાં તમે મોબાઈલ, લેપટોપ, અને તેના એસેસરીઝ વેચો છો. તમારું સ્ટોર વધતું હોવાથી તમને તમારા માલની ચોક્કસ રીતે વ્યવસ્થા કરવા માટે Odoo Inventory Moduleની જરૂર છે.
+Inventory Module કેવી રીતે મદદ કરે છે?
+
+માલની આવક અને જથ્થા પર નિયંત્રણ:
+        જો તમારું સ્ટોર કોઈ નવા ફોનના મોડલનો સ્ટોક મેળવે છે, તો તે Odooમાં "Receipts" તરીકે નોંધવામાં આવે છે.
+        તમે જાણી શકશો કે કયા પદાર્થનો કેટલો જથ્થો તમારા સ્ટોરમાં છે.
+
+વેરહાઉસ મેનેજમેન્ટ:
+
+    જો તમારે તમારું સ્ટોક બે અલગ અલગ જગ્યા પર રાખવું હોય, જેમ કે મુખ્ય સ્ટોર અને ગોડાઉન, તો Odoo તમને એ સ્થળ પ્રમાણે જથ્થો ટ્રેક કરવામાં મદદ કરે છે.
+
+સ્ટોક ટ્રેકિંગ અને રિઅલ-ટાઇમ અપડેટ:
+
+    જો કોઈ ગ્રાહક મોબાઈલ ખરીદે છે, તો એ મોબાઇલની સંખ્યા ઓટોમેટિકલી ઘટી જશે, અને તમે તુરંત જોઈ શકશો કે તમારું ઉપલબ્ધ સ્ટોક શું છે.
+
+લોજિસ્ટિક્સ અને ડિલિવરી:
+
+    ગ્રાહક જ્યારે ઓર્ડર આપે છે, Odoo તમને ડિલિવરી માટે પેકેજિંગ અને શિપમેન્ટની કામગીરી મેનેજ કરવામાં મદદ કરે છે.
+
+સ્ટોક રીઓર્ડર સ્તર:
+
+    Odoo સુચવે છે કે કયા માલનો જથ્થો ખૂટી રહ્યો છે, જેથી તમે તે પહેલાં જ નવો ઓર્ડર આપી શકો.
+    
+how to work invertory?
+    Receipts: You receive products into your warehouse.
+    Internal Transfers: You move stock between your own locations.
+    Delivery Orders: You ship products to customers after confirming sales orders.
+    
+what is scrape ?
+એક કારખાનામાં જ્યારે કાચા માલનો એક ભાગ બગડી જાય છે અથવા ઉત્પાદન પ્રક્રિયા દરમિયાન ખોટો થાય છે, ત્યારે તે સ્ક્રેપ તરીકે ગણી શકાય છે. આ માલનો ઉપયોગ ન થતો હોવાથી, તેને વિપરિત તરીકે વેચવાનો, નિકાલ કરવાનું કે પુનઃપ્રક્રિયા કરવાનું યોગ્ય રહેશે
+ 
+ 
+ 
+learn location,warhouse,opration type
+"લોકેશન ઇન્વેન્ટરી મોડ્યુલ એ એક સિસ્ટમ છે જે વ્યવસાયોને વિવિધ સ્થળોએ તેમના સ્ટોકનું વ્યવસ્થાપન કરવામાં મદદ કરે છે. આમાં વેરહાઉસ, સ્ટોર, અથવા વિતરણ કેન્દ્રો જેવા અનેક જગ્યાઓ પર રાખવામાં આવેલા માલને ટ્રેક કરવાનું કાર્ય કરે છે."
+
+ઉદાહરણ:
+
+    વપરાશ: મોટા રિટેલ સ્ટોર્સ પાસે 'Ahmedabad Store' અને 'Surat Store' માટે અલગ સ્ટોક ટ્રેકિંગ સિસ્ટમ હોય છે, જે આ મોડ્યુલ દ્વારા સંચાલિત થાય છે.
+
+    લાભ: જો અમદાવાદમાં સ્ટોક ઓછો છે, તો સુરતના વધારાના સ્ટોકમાંથી તે ટ્રાન્સફર કરી શકાય છે.
+
+A warehouse is a large building where goods are stored before they are sold or distributed
+
+opration type ::
+In an inventory module, operation types refer to the different types of actions or processes that are carried out to manage inventory movement, storage, and usage. These operations help businesses track and control the flow of goods across the supply chain, from procurement to distribution.
+Operation Types in Inventory Module
+
+    Receipts (માલનું આગમન):
+        Refers to incoming goods that are received into the inventory system.
+        Example: Receiving raw materials from a supplier or stock from a vendor.
+        Gujarati: "માલનું આગમન એટલે વેપારી અથવા સપ્લાયર પાસેથી માલ પ્રાપ્ત કરવો અને તેને સ્ટોરમાં દાખલ કરવો."
+
+    Deliveries (માલનું વિતરણ):
+        Refers to outgoing goods sent to customers, distributors, or other locations.
+        Example: Shipping a customer order or transferring goods to another warehouse.
+        Gujarati: "માલનું વિતરણ એટલે ગ્રાહકો અથવા અન્ય ગોડાઉનમાં માલ મોકલવાની પ્રક્રિયા."
+
+    Internal Transfers (આંતરિક સ્થળાંતર):
+        Refers to moving goods between different locations within the same company, such as transferring stock from one warehouse to another.
+        Example: Transferring products from the main warehouse to a retail store.
+        Gujarati: "આંતરિક સ્થળાંતરનો અર્થ છે એક વેરહાઉસમાંથી બીજામાં માલની હિલચાલ કરવી."
+
+    Adjustments (જોડાણ/કપાત):
+        Used to adjust inventory levels due to discrepancies, such as damaged goods, theft, or human error.
+        Example: Reducing stock levels for expired products or increasing inventory for unrecorded stock.
+        Gujarati: "જોડાણ અથવા કટોકટી તે છે જ્યારે ઇન્વેન્ટરીનું લેવલ શારીરિક ગણતરી સાથે મેળ ખાતું નથી અને સુધારો કરવો પડે છે."
+
+    Manufacturing Operations (ઉત્પાદન સંચાલન):
+        Refers to using raw materials and converting them into finished goods.
+        Example: Using wood and nails to manufacture furniture.
+        Gujarati: "ઉત્પાદન પ્રક્રિયા માટેના કાચા માલનો ઉપયોગ કરીને તૈયાર માલ બનાવવું."
+
+    Scrap Operations (સ્ક્રેપ કામગીરી):
+        Handles unusable, damaged, or waste inventory by recording and disposing of it.
+        Example: Disposing of defective parts from a production line.
+        Gujarati: "સ્ક્રેપ કામગીરી એ બગડેલા અથવા ઉપયોગ માટે અયોગ્ય માલને રેકોર્ડ કરવાની પ્રક્રિયા છે."
+
+    Returns (પરત ફરતો માલ):
+        Refers to goods that are returned to the warehouse or supplier, such as customer returns or rejected shipments.
+        Example: Returning damaged goods to the vendor.
+        Gujarati: "માલ પરત એટલે ગ્રાહક કે સપ્લાયર તરફથી વેચાયેલા માલને પાછું મંગાવવી."
+
+    Cycle Count (ચાલુ ગણતરી):
+        Periodic checking and counting of inventory for a specific location or product category to maintain accuracy.
+        Example: Counting a specific shelf's stock weekly instead of counting the entire warehouse.
+        Gujarati: "ચાલુ ગણતરી એ સમયાંતરે ઇન્વેન્ટરીના સ્ટોકની ચોકસાઈ માટે કરવામાં આવતી પ્રક્રિયા છે."
+
+How Operation Types Help in Inventory Management
+
+    Track Movements:
+    Every movement of goods is categorized and logged, providing full transparency.
+
+    Improve Accuracy:
+    Adjustments and cycle counts ensure records match the actual stock.
+
+    Reduce Losses:
+    Operations like scrap and returns help identify and minimize wastage or theft.
+
+    Optimize Workflow:
+    Separate operation types streamline processes like receiving, transferring, and delivering goods.
+
+In Gujarati Summary:
+"ઇન્વેન્ટરી મોડ્યુલમાં ઓપરેશન ટાઇપ એ આ વિવિધ કાર્યો છે જે માલનું આગમન, વિતરણ, પરિવહન, અથવા ઉપયોગ કેવી રીતે થાય છે તે ટ્રેક કરવા માટે વપરાય છે. આના દ્વારા વ્યવસાયમાં સ્ટોકને કાયમ અસરકારક રીતે મેનેજ કરવામાં આવે છે."
+
+
+Putaway Rule (સ્થાનગત નિયમ) inventory managementના સોફ્ટવેરમાં તે નિયમો છે જે નક્કી કરે છે કે માલ (stock/items) ક્યાં મુકવું જોઈએ જ્યારે તે વેરહાઉસ (warehouse)માં આવે છે. 
+    ફાયદા
+        જથ્થાની ઝડપી ઍક્સેસ: જરૂરી વસ્તુઓ ઝડપથી મળી શકે છે.
+        સ્થાનનો સદુપયોગ: વધુ માલને વ્યવસ્થિત રીતે સંગ્રહિત કરી શકાય છે.
+        ભૂલની શક્યતા ઓછી: વસ્તુઓને ખોટી જગ્યાએ મૂકાશે નહીં.
+
+ઉદાહરણ:
+
+એક કસ્ટમ વેરહાઉસમાં "Putaway Rule" લાગુ પાડવું:
+
+    કાચા માલ (Raw Materials) વેરહાઉસના "પ્રોડક્શન ઝોન"માં મુકવું.
+    તૈયાર માલ (Finished Goods) ડિલિવરી ઝોનમાં. 
+
+Replenishment (પુનઃપૂર્તિ) inventory modulesમાં એક પ્રક્રિયા છે, જેની મદદથી વેરહાઉસ અથવા સ્ટોરમાં જે માલ ખૂટે છે, તેને ફરીથી ઉપલબ્ધ કરવામાં આવે છે.
+
+show all the command line in odoo in notebook
+
+
+
+
+
+
+==============================field parameter
+name
+
+    Purpose: Defines the name of the action, which is displayed as the title of the view when the action is executed.
+res_model
+
+    Purpose: Specifies the target model for the action.
+view_mode == if not give its return error
+
+    Purpose: Specifies the modes of views that this action should use. Common options:
+        tree: List view to display multiple records in tabular form.
+        form: Form view to display or edit a single record.
+        kanban: Kanban view for a card-like display.
+        calendar: Calendar view for date-based data.
+        graph: Graph view for charts and analytics.
+        pivot: Pivot table view for advanced reporting.
+domain
+
+    Purpose: Filters the records displayed in the action based on certain criteria.
+    Example:
+
+	<field name="domain">[('is_active', '=', True)]</field>        
+help
+
+    Purpose: Displays help text in the view when no records are available.
+
+<graph>	Defines a graph view for analytics and charts.
+<field>	Specifies a field from the model to display in the view.
+<group>	Groups fields together in a form view.
+<notebook>	Creates tabs in a form view.
+<page>	Defines each tab inside a <notebook>.
+
+
+the <field name="arch" type="xml"> is where you define the structure and layout of Odoo views in XML.
+It is a mandatory part of any ir.ui.view record and is used for defining form, tree, kanban, calendar, graph, and other types of views
+
+
+The <group> tag can have attributes to further customize its behavior. Common attributes include:
+Attribute	Description	Example
+col	Specifies the number of columns within the group	<group col="2">
+string	Adds a label or title to the group	<group string="Address Details">
+
+1. Purpose of ir.ui.view
+Actions
+
+Actions define the behavior of the system in response to user actions: login, action button, selection of an invoice, …
+
+Actions can be stored in the database or returned directly as dictionaries in e.g. button methods. :
+
+
+Bindings
+
+Aside from their two mandatory attributes, all actions also share optional attributes used to present an action in an arbitrary model’s contextual menu:
+
+binding_model_id
+
+    specifies which model the action is bound to
+URL Actions (ir.actions.act_url)
+Server Actions (ir.actions.server)
+Report Actions (ir.actions.report)
+res_model
+
+    model to present views for
+views
+
+    a list of (view_id, view_type) pairs. The second element of each pair is the category of the view (list, form, graph, …) and the first is an optional database id (or False).
+    
+res_id (optional)
+
+    if the default view is form, specifies the record to load (otherwise a new record should be created)
+
+target (default= new)
+url
+
+
+The ir.ui.view model is used to:
+
+    Define Data Presentation: Specify how records of a model are displayed (e.g., forms, lists, kanban views).
+    Customize Layout: Allow customization of the layout and appearance of the user interface.
+    Control User Interaction: Determine which fields and actions are available to users.
+    
+    
+=============today task 
+context action
+view all tree from,
+new====>>>  search kanban
+field rela,simple
+what is templets
+In Odoo, templates refer to predefined structures used to format and organize content. These templates are often used in various areas of Odoo, including reports, emails, websites, and dynamic content generation.
+Common Types of Templates in Odoo:
+
+    Email Templates
+    Report Templates (QWeb Templates)
+    Website Templates
+    SMS Templates
+
+field attributes
+widget="many2many_tags": For a Many2many field to display tags.
+widget="monetary": Displays a monetary value with a currency symbol.
+widget="email": Renders the field as an email link.
+widget="progressbar": Renders the field as a progress bar.
+widget="html": Displays HTML content.
+
+The t- prefix in Odoo's QWeb templates denotes dynamic attributes or behaviors.
+t-field: Displays a field's value dynamically.
+t-if	Adds conditional rendering.
+t-else	Alternative for t-if.
+t-elif	Else-if for conditions.
+t-foreach	Loops through a collection.
+t-as	Defines a loop variable for t-foreach.
+t-call	Calls and renders another template.
+t-field	Renders a model field.
+t-esc	Escapes and renders raw text.
+t-set	Sets a variable.
+t-att-*	Dynamically sets HTML attributes.
+t-value	Assigns a value to variables or attributes.
+
+
+=======================================filter domain optaion
+Operator	Description
+=	Equals: The field's value must match exactly.
+!=	Not equals: The field's value must not match.
+>	Greater than: The field's value must be greater than the specified value.
+<	Less than: The field's value must be less than the specified value.
+>=	Greater than or equal to the specified value.
+<=	Less than or equal to the specified value.
+Text Matching Operators
+Operator	Description
+ilike	Case-insensitive match: Checks if the field contains the specified value.
+like	Case-sensitive match: Checks if the field contains the specified value.
+not ilike	Case-insensitive match where the field does not contain the value.
+not like	Case-sensitive match where the field does not contain the value.
+Membership Operators
+Operator	Description
+in	Checks if the field's value is within a list of specified values.
+not in	Checks if the field's value is not within a list of specified values.
+Null or Boolean Operators
+Operator	Description
+=	Can be used with False or None to check for empty or null values.
+!=	Can be used to check if a value is not empty or null.
+Child Relationship Operators
+Operator	Description
+child_of	Checks if a record is a child of a specified record (used with hierarchies like tree structures).
+parent_of: Filters records that are ancestors (parents, grandparents, etc.) of a given record in a hierarchical structure
+
+
+KABAN VIEW DEFFERNT VIEW FOR LAYOUT ==================
+
+FOR CLICK CARD ==  <div t-attf-class="oe_kanban_card oe_kanban_global_click">
+TOP ==     <div class="o_kanban_record_top mb16">  MARGIN BOTTOM==16
+            <div class="o_kanban_record_headings mt4">MAGIN TOP==4
+            
+FOR BOTTOM ==  <div class="oe_kanban_bottom_left">  The prefix o_ is the modern and standard convention in Odoo. 
+		<div class="oe_kanban_bottom_left">  The prefix oe_ (short for Odoo Enterprise) was traditionally used in older versions of Odoo to define UI elements and styles. 
+               <div class="oe_kanban_bottom_left text-muted">
+FOR RIGHT===  <div class="oe_kanban_bottom_right">
+FOR HEADING == <div class="o_kanban_record_headings ms-1"> milestone
+for footer==         <div class="oe_kanban_footer">
+
+CLASS METHOD IS AVALIBLE
+
+_name	Specifies the technical name of the model (table name in the database).
+_description	A descriptive name for the model (used in the UI, logs, etc.).
+_rec_name	Specifies the default field to display as the record name in views or related fields.
+_inherit	Used to inherit and extend an existing model.
+_inherits	Implements delegation inheritance (links to another model).
+_order	Specifies the default order of records in queries (e.g., "name asc" or "create_date desc").
+_log_access	If set to False, disables automatic tracking of create_uid, create_date, write_uid, write_date.
+_auto	If False, disables automatic creation of the database table.
+_sql_constraints	Defines unique constraints or other SQL-level constraints.
+_table	Specifies a custom table name (if different from _name).
+_transient	Indicates that the model is a transient model (data is temporary).
+_check_company_auto	Enables or disables automatic multi-company rules for records.
+
+_rec_name ===>> Odoo uses the field name as the display name. If name does not exist, it defaults to id. The _rec_name attribute allows you to define another field to be used as the display name for records in that model.
+
+
+ORM METHOD TO DECLARE =====
+
+
+@api.model: Indicates the method does not depend on a particular record (no self.id).
+@api.multi: (Odoo <= 13) For methods that process multiple records.
+@api.depends: Used for computed fields.
+@api.onchange: Triggers when a field changes in the form view.
+@api.constrains: Used for validation logic. 
+
+
+@api.model_create_multi
+use terminal
+stud=[{"clname":"ram.."}]
+self.env[Demo].create(stud)
+self._cr.commit()
+
+Here’s a detailed breakdown of the attributes listed, along with examples of typical values and their meanings:
+
+---
+
+### **1. Common Attributes**
+
+| **Attribute** | **Typical Values**       | **Explanation** |
+|---------------|--------------------------|-----------------|
+| `id`          | `"unique_view_id"`       | A unique XML identifier for the view. |
+| `model`       | `"res.partner"`          | The model associated with the view. |
+| `name`        | `"custom.partner.view"`  | A descriptive name for the view. |
+| `type`        | `"form"`, `"tree"`, etc. | Type of the view: `form`, `tree`, `kanban`, `search`. |
+| `priority`    | `16`, `10`               | Determines the order in which views are applied. Lower values have higher priority. |
+
+---
+
+### **2. Form View Attributes**
+
+| **Attribute** | **Typical Values**       | **Explanation** |
+|---------------|--------------------------|-----------------|
+| `string`      | `"Partner Form"`         | Title displayed on the form. |
+| `editable`    | `"bottom"`, `"top"`, `true` | Inline editing placement or enablement. |
+| `create`      | `true`, `false`          | Enables or disables record creation. |
+| `delete`      | `true`, `false`          | Allows or restricts record deletion. |
+| `archived`    | `1`, `0`                 | Shows archived records when set to `1`. |
+| `js_class`    | `"custom_js_class"`      | Custom JavaScript class to enhance the form view. |
+
+---
+
+### **3. Tree View Attributes**
+
+| **Attribute** | **Typical Values**       | **Explanation** |
+|---------------|--------------------------|-----------------|
+| `string`      | `"Partner List"`         | Title displayed on the list view. |
+| `editable`    | `"bottom"`, `"top"`, `true` | Enables inline editing placement or activation. |
+| `decoration-*`| `decoration-danger`, `decoration-info` | Adds conditional styling (e.g., red rows). |
+| `multi_edit`  | `true`, `false`          | Enables editing multiple records simultaneously. |
+| `default_order`| `"name asc"`, `"date desc"` | Sets default sorting order. |
+| `create`      | `true`, `false`          | Toggles record creation ability. |
+
+---
+
+
+
+### **4. Kanban View Attributes**
+
+| **Attribute**    | **Typical Values**       | **Explanation** |
+|-------------------|--------------------------|-----------------|
+| `default_group_by`| `"state"`               | Groups records by the specified field. |
+| `color`           | `"priority"`            | Applies colors based on field values. |
+| `quick_create`    | `true`, `false`         | Enables quick creation of records. |
+| `drag_group`      | `true`, `false`         | Enables dragging for reordering or regrouping. |
+| `js_class`        | `"custom_kanban_class"` | Adds custom JavaScript behavior. |
+
+---
+
+### **5. Search View Attributes**
+
+#### Field Attributes:
+| **Attribute** | **Typical Values**       | **Explanation** |
+|---------------|--------------------------|-----------------|
+| `name`        | `"name"`, `"state"`      | Field to include in the search. |
+| `string`      | `"Partner Name"`         | Label displayed for the field. |
+| `operator`    | `"="`, `"ilike"`         | Comparison operator used in filtering. |
+| `filter_domain`| `[('state', '=', 'draft')]` | Advanced domain for pre-filtering. |
+
+#### Filter Attributes:
+| **Attribute** | **Typical Values**       | **Explanation** |
+|---------------|--------------------------|-----------------|
+| `string`      | `"Draft Records"`        | Label for the filter. |
+| `domain`      | `[('state', '=', 'draft')]` | Predefined filter criteria. |
+
+#### Group Attributes:
+| **Attribute** | **Typical Values**       | **Explanation** |
+|---------------|--------------------------|-----------------|
+| `string`      | `"State"`                | Title for grouping options. |
+| `context`     | `{'group_by': 'state'}`  | Context dictionary to enable grouping. |
+
+---
+
+		### **6. Graph View Attributes**
+
+		| **Attribute**      | **Typical Values**      | **Explanation** |
+		|---------------------|-------------------------|-----------------|
+		| `string`           | `"Sales Analysis"`     | Title of the graph. |
+		| `type`             | `"bar"`, `"line"`, `"pie"` | Type of the graph. |
+		| `stacked`          | `true`, `false`        | Enables stacked bars for bar graphs. |
+		| `measure`          | `"total_sales"`        | Field to be measured. |
+		| `default_measure`  | `"revenue"`            | Default measurement field. |
+
+		---
+
+		### **7. Calendar View Attributes**
+
+		| **Attribute**      | **Typical Values**      | **Explanation** |
+		|---------------------|-------------------------|-----------------|
+		| `date_start`       | `"start_date"`         | Field for the event start date. |
+		| `date_stop`        | `"end_date"`           | Field for the event end date. |
+		| `color`            | `"state"`              | Field used to determine the color of events. |
+		| `string`           | `"Meeting Schedule"`   | Title of the calendar view. |
+		| `quick_add`        | `true`, `false`        | Enables quick addition of events. |
+
+		---
+
+		### **8. Pivot View Attributes**
+
+		| **Attribute**      | **Typical Values**      | **Explanation** |
+		|---------------------|-------------------------|-----------------|
+		| `string`           | `"Sales Pivot"`        | Title of the pivot table. |
+		| `expand`           | `true`, `false`        | Whether rows are expanded by default. |
+		| `default_measure`  | `"amount"`             | Default measure field for calculations. |
+		| `default_group_by` | `"country"`            | Default field for grouping rows. |
+	   
+=================1. Button Attributes
+1.1 type
+
+    Specifies the action type of the button.
+    Common values:
+        object: Calls a Python method on the corresponding model.
+        action: Executes a predefined server action.
+        url: Redirects to a specific URL.
+        set: Sets a value for a field.
+        
+1.2 string
+1.3 name = python file inside function 
+1.4 class
+
+    Assigns CSS classes to style the button.
+    Common classes:
+        btn-primary: Blue, indicating a primary action.
+        btn-secondary: Grey, indicating a secondary action.
+        btn-danger: Red, used for destructive actions.
+
+1.5 icon use fa (font awesome class)
+1.6 confirm  after the open windows
+1.7 attrs
+
+    Adds conditional logic for the button's visibility, readonly, or other states.
+eg= <button name="approve" type="object" string="Approve" attrs="{'invisible': [('state', '!=', 'draft')]}"/>
+1.8 context
+
+    Passes additional context to the server or client action.
+
+========fields parameters ==
+In Odoo, fields are defined with various parameters that control their behavior, display, and functionality. Here is a comprehensive list of **field parameters** with their possible values and explanations:
+
+### **Common Field Parameters:**
+
+| **Parameter**     | **Possible Values**            | **Description** |
+|-------------------|---------------------------------|-----------------|
+| `name`            | `string` (e.g., `"name"`, `"price"`) | Name of the field, typically matches the model's attribute. |
+| `string`          | `string` (e.g., `"Partner Name"`) | Label displayed on the form view. |
+| `type`            | `"char"`, `"text"`, `"integer"`, `"float"`, `"many2one"`, `"one2many"`, `"many2many"`, `"boolean"`, `"datetime"`, `"date"`, `"binary"`, `"selection"` | Specifies the type of field (e.g., string, integer, relation). |
+| `required`        | `True`, `False`                | Indicates if the field is mandatory. |
+| `readonly`        | `True`, `False`                | Specifies if the field is read-only. |
+| `default`         | `value`, `function()`          | Defines the default value or a function that computes the default value for the field. |
+| `help`            | `string` (e.g., `"Enter the name of the partner"`) | Tooltip text that appears when the field is focused on. |
+| `size`            | `integer` (e.g., `255`)        | Specifies the maximum length for a character field. |
+| `index`           | `True`, `False`                | Whether the field should be indexed for faster search. |
+| `store`           | `True`, `False`                | Defines whether the field is stored in the database. |
+| `track_visibility`| `"onchange"`, `"always"`, `False` | Tracks changes for logging. |
+| `related`         | `related_field`                | Creates a virtual field that pulls data from another model. |
+| `compute`         | `function()`                   | A function that computes the field value dynamically. |
+| `inverse`         | `function()`                   | A function that allows you to set the value for a computed field. |
+| `selection`       | `[(value, label), ...]`        | Defines a selection field where the user can pick from predefined options. |
+
+inverse એ તમારે computed field ને "editable" બનાવવા માટે મદદરૂપ થાય છે. પ્રથમ Odoo તેને ગણાવે છે (compute), પછી તમારું manual input ધરખમ મૂલ્ય update કરે છે (inverse).
+---
+
+### **Field-Specific Parameters:**
+
+#### **For `many2one` fields:**
+| **Parameter**     | **Possible Values**              | **Description** |
+|-------------------|-----------------------------------|-----------------|
+| `comodel_name`    | Model name (e.g., `"res.partner"`) | Specifies the related model. |
+| `ondelete`        | `"cascade"`, `"set null"`, `"restrict"`, `"set default"` | Defines what happens when the related record is deleted. |
+| `domain`          | `[('field', '=', value)]`         | Limits the records that can be selected. |
+| `context`         | `{'key': 'value'}`                | Passes context for the field. |
+<!-- <field name="context">{'default_clname':'ronak_conkt...'}</field> -->
+
+
+#### **For `one2many` fields:**
+| **Parameter**     | **Possible Values**              | **Description** |
+|-------------------|-----------------------------------|-----------------|
+| `comodel_name`    | Model name (e.g., `"res.par
+tner"`) | Specifies the related model. |
+| `inverse_name`    | `field_name`                     | The reverse field that links to the current model. |
+
+#### **For `many2many` fields:**
+| **Parameter**     | **Possible Values**              | **Description** |
+|-------------------|-----------------------------------|-----------------|
+| `comodel_name`    | Model name (e.g., `"res.partner"`) | Specifies the related model. |
+| `relation`        | `"model_name"`                    | The intermediary model used for the relation. |
+| `column1`         | `"model_name"`                    | Specifies the field linking the current model to the intermediary model. |
+| `column2`         | `"model_name"`                    | Specifies the field linking the intermediary model to the related model. |
+
+#### **For `selection` fields:**
+| **Parameter**     | **Possible Values**              | **Description** |
+|-------------------|-----------------------------------|-----------------|
+| `selection`       | `[(value, label), ...]`           | Defines the available choices in the selection dropdown. |
+| `default`         | `value`                 ++
+
+
+# ORM METHODS =====> create method direct save button threw ...
+@api.model
+    def create(self,val):
+        da=super(Demo,self).create(val)
+        return da
+    
+    def write(self,val):
+        da=super(Demo,self).write(val)
+        print("Update val===>",val)
+        return da
+    def copy(self):
+        da=super(Demo,self).copy()
+        print("copy val===>",da)
+        return da
+
+    def unlink(self):
+        print("self delete ==>",self)
+        da=super(Demo,self).unlink()
+        print("delete ==>",da)
+        return da 
+
+    @api.model
+    def name_create(self,clname):
+        da=super(Demo,self).name_create(clname)
+        print("name_create===>",da)
+        return da
+
+    def default_get(self,fields=[]):
+        print("fields====>",fields)
+        da=super(Demo,self).default_get(fields)
+        print("default_get===>",da)
+        return da
+      
+      
+      	# user_record = self.env['res.users'].browse(42)
+        # dm=self.with_user(user_record)
+       
+        # print("with_user======>",dm)
+        # new=self.env['examkt'].browse([1,2,3])
+        # if not new.exists():
+        #     raise UserError(f"obj has not found {new}")
+    
+        # new=self.env['examkt'].read()
+        # new=self.env['examkt'].sorted(key='clname')
+        # domain = [('clname', '=', self.clname)]
+        # new=self.env['examkt'].search(domain).mapped('age')
+        # new=self.env['examkt'].fields_get('clname')
+        # print("orm method ====>",new)
+
+1. create(vals)
+
+    Purpose: Creates a new record in the model.
+    Parameters:
+        vals (dict): Dictionary containing field values.
+    Returns: A recordset representing the created record(s).
+
+Example:
+
+record = self.env['model.name'].create({'field1': 'value1', 'field2': 'value2'})
+
+2. write(vals)
+
+    Purpose: Updates records with new field values.
+    Parameters:
+        vals (dict): Dictionary of fields and their new values.
+    Returns: True if the operation is successful.
+
+Example:
+
+self.write({'field1': 'new_value'})
+
+3. browse(ids)
+
+    Purpose: Fetches a recordset corresponding to the given IDs.
+    Parameters:
+        ids (list or int): List of IDs or a single ID.
+    Returns: A recordset.
+
+Example:
+
+recordset = self.env['model.name'].browse([1, 2, 3])
+
+4. search(domain, limit=0, offset=0, order=None, count=False)
+
+    Purpose: Searches for records matching the given domain.
+    Parameters:
+        domain (list): A list of tuples defining the search criteria.
+        limit (int): Maximum number of records to return.
+        offset (int): Number of records to skip.
+        order (str): Sorting order.
+        count (bool): If True, returns the count of matching records instead of the recordset.
+    Returns: A recordset or an integer if count is True.
+
+Example:
+
+records = self.env['model.name'].search([('field', '=', 'value')], limit=10)
+
+5. search_count(domain)
+
+    Purpose: Counts the number of records matching the domain.
+    Parameters:
+        domain (list): A list of tuples defining the search criteria.
+    Returns: Integer count of matching records.
+
+Example:
+
+count = self.env['model.name'].search_count([('field', '=', 'value')])
+
+6. search_read(domain, fields=None, limit=0)
+
+    Purpose: Combines search and read methods.
+    Parameters:
+        domain (list): Search criteria.
+        fields (list): List of fields to read.
+        limit (int): Maximum number of records.
+    Returns: A list of dictionaries with field values.
+
+Example:
+
+data = self.env['model.name'].search_read([('field', '=', 'value')], ['field1', 'field2'], limit=5)
+
+7. read(fields=None, load='_classic_read')
+
+    Purpose: Reads specified fields of records.
+    Parameters:
+        fields (list): List of fields to read.
+        load (str): Loading mode.
+    Returns: A list of dictionaries with field values.
+
+Example:
+
+data = self.read(['field1', 'field2'])
+
+8. unlink()
+
+    Purpose: Deletes records.
+    Parameters: None.
+    Returns: True if the operation is successful.
+
+Example:
+
+self.env['model.name'].browse([1, 2, 3]).unlink()
+
+9. copy(default=None)
+
+    Purpose: Duplicates a record.
+    Parameters:
+        default (dict): Default values for the new record.
+    Returns: A new record.
+
+Example:
+
+duplicate_record = self.copy({'field1': 'new_value'})
+
+10. fields_get(allfields=None, attributes=None)
+
+    Purpose: Fetches metadata about fields.
+    Parameters:
+        allfields (list): List of fields to fetch metadata for.
+        attributes (list): List of attributes to fetch.
+    Returns: A dictionary of field metadata.
+
+Example:
+
+fields_info = self.env['model.name'].fields_get(['field1', 'field2'])
+
+11. default_get(fields)
+
+    Purpose: Retrieves default values for specified fields.
+    Parameters:
+        fields (list): List of field names.
+    Returns: A dictionary of field defaults.
+
+Example:
+
+defaults = self.env['model.name'].default_get(['field1', 'field2'])
+
+12. name_get()
+
+    Purpose: Returns the display name for records.
+    Parameters: None.
+    Returns: A list of tuples (id, name).
+
+Example:
+
+names = self.env['model.name'].browse([1, 2]).name_get()
+
+13. name_create(name)
+
+    Purpose: Creates a record using a display name.
+    Parameters:
+        name (str): The display name for the record.
+    Returns: A tuple (id, name).
+
+Example:
+
+new_record = self.env['model.name'].name_create('New Name')
+
+14. fields_view_get(view_id=None, view_type='form', toolbar=False, submenu=False)
+
+    Purpose: Fetches the structure of a view.
+    Parameters:
+        view_id (int): ID of the view.
+        view_type (str): Type of the view ('form', 'tree', etc.).
+        toolbar (bool): Whether to include the toolbar.
+        submenu (bool): Whether to include the submenu.
+    Returns: A dictionary containing view details.
+
+Example:
+
+view_info = self.env['model.name'].fields_view_get(view_id=1, view_type='form')
+
+15. check_access_rights(operation, raise_exception=True)
+
+    Purpose: Checks user access rights.
+    Parameters:
+        operation (str): The operation ('create', 'write', 'unlink', 'read').
+        raise_exception (bool): Whether to raise an exception if access is denied.
+    Returns: True if access is allowed, otherwise raises an exception.
+
+Example:
+
+self.env['model.name'].check_access_rights('write')
+
+The `with_user` method in ORM frameworks (such as Odoo) is used to temporarily execute operations under the context of a specific user. This method effectively "impersonates" another user, altering permissions, access rights, and behavior based on the new user's role.
+
+Here’s a breakdown of the **parameters** and **return values** for `with_user`:
+
+---
+
+### **Parameters**
+
+1. **User Identifier or Record**
+   - **User ID (Integer)**: The database ID of the user you want to impersonate.
+     ```python
+     model_instance.with_user(42)
+     ```
+   - **User Record**: An instance of the user model (e.g., `res.users` in Odoo).
+     ```python
+     user_record = self.env['res.users'].browse(42)
+     model_instance.with_user(user_record)
+     ```
+
+   This user determines the access rights and permissions under which the operation will run.
+
+---
+
+### **Return Values**
+
+- **A New Instance of the Model with Updated User Context:**
+  - The method returns a new instance of the model that uses the permissions, access rights, and environment of the specified user.
+  - The original instance remains unchanged.
+
+  Example:
+  ```python
+  admin_model_instance = model_instance.with_user(admin_user)
+  ```
+
+---
+
+### **Usage Example**
+
+#### Odoo ORM Example
+```python
+# Original model instance (executed as the current user)
+partners = self.env['res.partner']
+
+# Specify a different user by ID
+partners_as_admin = partners.with_user(1)  # Assume 1 is the admin user ID
+
+# Perform operations with admin permissions
+all_partners = partners_as_admin.search([])
+```
+
+- In this example:
+  - The `with_user` method switches the context to user ID `1` (admin).
+  - The `search` operation is executed with the admin's permissions.
+
+---
+
+### **When to Use `with_user`**
+
+1. **Testing User-Specific Access Rights:**
+   - To simulate how operations behave for different users with varying permissions.
+
+2. **Overriding Default Behavior:**
+   - Temporarily elevate or change access rights for specific operations.
+
+3. **Impersonation for Multi-User Environments:**
+   - Execute tasks on behalf of another user programmatically.
+
+---
+
+### Comparison of `with_context` vs. `with_user`
+
+| Feature            | `with_context`                          | `with_user`                          |
+|---------------------|------------------------------------------|---------------------------------------|
+| Purpose            | Temporarily modifies the execution context (e.g., language, company). | Temporarily changes the user context (e.g., permissions, access rights). |
+| Parameters         | Dictionary of key-value pairs for context. | User ID or user record.              |
+| Effect             | Affects data filtering, translations, or logic based on context variables. | Affects permissions and access rights. |
+| Return Value       | New instance with updated context.        | New instance with updated user context. |
+
+
+
+---
+
+
+---
+
+### **Key Differences Between `search` and `filtered_domain`**
+
+| Feature               | `search`                               |`     filtered_domain`                               |
+|-----------------------|------------------------------------------------|------------------------------------------------|
+| **Purpose**           | Queries the database to fetch records matching a domain. | Filters an existing recordset in memory based on a domain. |
+| **Scope**             | Works on the entire database (global scope).   | Works only on the current recordset (local scope). |
+| **Performance**       | May be slower due to database query overhead.  | Faster as it operates on in-memory d	ata.     |
+| **Use Case**          | To retrieve records from the database.         | To narrow down an existing recordset.          |
+| **Recordset Source**  | Returns a new recordset from the database.     | Returns a subset of the existing recordset.    |
+
+---
+
+
